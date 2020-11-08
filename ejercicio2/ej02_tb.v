@@ -24,7 +24,7 @@ initial begin// test del programa
   $monitor("%b     %b   |   %b         %b         %b   | %b    %b  | %b  %b", clock,reset,enable1,enable2,enable3,bus,s,Y,C_Z);
   reset = 1;
   #2 enable1 = 0;  enable2 = 0; enable3 = 0; reset = 0; bus = 4'd4; s = 3'd0;
-  #2 enable1 = 1;  enable2 = 1; enable3 = 1; 
+  #2 enable1 = 1;  enable2 = 1; enable3 = 1;
   #2 bus = 4'd8; #2 s = 3'd2;
   #2 bus = 4'd7; #2 s = 3'd1;
   #2 s = 3'd0;

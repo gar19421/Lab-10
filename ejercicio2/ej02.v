@@ -24,26 +24,18 @@ module ALU(input wire [3:0] A, B, input wire [2:0] S, output reg [3:0] R, output
     case(S)
     ST:
        result <= A;
-
     COMPI:
        result <= (A - B);
-
     LIT:
        result <= B;
-
     ADDI:
        result <= (A + B);
-
     NANDI:
        result <= (A ~& B);
-
     default: result <= 5'd0;
     endcase
-
     assign {R, C_Z[0], C_Z[1]} = {result[3:0], result[4], ((result[3:0]==4'b0) ? 1'b1 : 1'b0) };
-
   end
-
 endmodule
 
 
@@ -56,11 +48,8 @@ endmodule
 
 
 module Bus_Driver(input wire enable, input wire [3:0] bus, output wire [3:0] Y);
-
   assign Y = enable ? bus : 4'bz;
-
 endmodule
-
 
 module Control (input wire clk, reset, enable1, enable2, enable3, input wire [3:0] bus, input wire [2:0] S,
   output wire [3:0] Y, output wire [1:0] C_Z);
