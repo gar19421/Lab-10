@@ -28,7 +28,7 @@ initial begin// test del programa
   #2; #2; #2; #2; #2;
   #2 load = 1; loadPC = 12'd12;
   #2 load = 0;
-  #2; #2; #2;
+  #2; #2; #2;// prueba del cambio del contador y muestra de memoria
   $finish;
 end
 

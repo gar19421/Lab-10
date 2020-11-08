@@ -7,7 +7,7 @@ module FF_D1(input wire clock, reset, enable, d, output reg Y);
       Y <= d;
     end
   end
-endmodule
+endmodule//ff de 1bit
 
 
 module ALU(input wire [3:0] A, B, input wire [2:0] S, output reg [3:0] R, output reg [1:0] C_Z);//implementacion de la ALU
@@ -35,7 +35,7 @@ module ALU(input wire [3:0] A, B, input wire [2:0] S, output reg [3:0] R, output
     default: result <= 5'd0;
     endcase
     assign {R, C_Z[0], C_Z[1]} = {result[3:0], result[4], ((result[3:0]==4'b0) ? 1'b1 : 1'b0) };
-  end
+  end// implementacion de la alu con las instrucciones necesarias para el microprocesador y bitswizzing.
 endmodule
 
 
@@ -44,12 +44,12 @@ module Accumulator(input wire clk, reset, enable, input wire [3:0] D, output wir
   FF_D1 FF2(clk, reset, enable, D[2], Accu[2]);
   FF_D1 FF3(clk, reset, enable, D[1], Accu[1]);
   FF_D1 FF4(clk, reset, enable, D[0], Accu[0]);
-endmodule
+endmodule// acumulador implementado con un fliflop de 4 bits
 
 
 module Bus_Driver(input wire enable, input wire [3:0] bus, output wire [3:0] Y);
   assign Y = enable ? bus : 4'bz;
-endmodule
+endmodule//bus driver que fue implementado con un buffer triestado de 4 bits
 
 module Control (input wire clk, reset, enable1, enable2, enable3, input wire [3:0] bus, input wire [2:0] S,
   output wire [3:0] Y, output wire [1:0] C_Z);
@@ -61,4 +61,4 @@ module Control (input wire clk, reset, enable1, enable2, enable3, input wire [3:
   ALU alu1(accu, data_bus, S, R, C_Z);
   Bus_Driver BD2(enable3, R, Y);
 
-endmodule
+endmodule//control- modulo de union de todos los demas para el fragmento del microprocesador

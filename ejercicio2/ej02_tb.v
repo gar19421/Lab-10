@@ -1,5 +1,5 @@
 module testbench();
-reg clock, reset, enable1, enable2, enable3;
+reg clock, reset, enable1, enable2, enable3;//variables para el programa
 reg [3:0] bus;
 reg [2:0] s;
 wire [3:0] Y;
@@ -29,7 +29,7 @@ initial begin// test del programa
   #2 bus = 4'd7; #2 s = 3'd1;
   #2 s = 3'd0;
   #2 bus = 4'd3; #2 s = 3'd4;
-  #2 bus = 4'd15; #2 s = 3'd3;
+  #2 bus = 4'd15; #2 s = 3'd3;//testeo de operaciones del alu y sus respectivas salidas.
 
   $finish;
 end

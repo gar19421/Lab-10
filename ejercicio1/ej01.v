@@ -3,7 +3,7 @@ module FF_1BIT(input wire clk, reset, enable, D, output reg Y) ;
     if (reset)  Y <= 1'b0;
     else if(enable) Y <= D;
   end
-endmodule
+endmodule//FF de 1 bit
 
 module Program_Couter(input wire clk, reset, enable, load, input [11:0] loadPC, output reg[11:0] count);
 //contador de 12 bits con entradas de clock, reset, enable y load
@@ -20,7 +20,7 @@ module Program_Couter(input wire clk, reset, enable, load, input [11:0] loadPC, 
     end
   end
 
-endmodule
+endmodule// program couter implementado con un contador de 12 bits
 
 module Fetch (input wire clk, reset, enable, input wire [7:0] program_byte, output wire [3:0] instr, oprnd) ;
   FF_1BIT FF1(clk, reset, enable, program_byte[7], instr[3]);
@@ -31,7 +31,7 @@ module Fetch (input wire clk, reset, enable, input wire [7:0] program_byte, outp
   FF_1BIT FF6(clk, reset, enable, program_byte[2], oprnd[2]);
   FF_1BIT FF7(clk, reset, enable, program_byte[1], oprnd[1]);
   FF_1BIT FF8(clk, reset, enable, program_byte[0], oprnd[0]);
-endmodule
+endmodule//fetch el cual es un fliflop de 8 bits implementado con el ff tipo d de 1 bit
 
 module Program_ROM (input wire [11:0] address, output wire [7:0] word);//memoria rom
   reg [7:0] mem [0:4095];// creacion de arreglo de memoria
@@ -39,7 +39,7 @@ module Program_ROM (input wire [11:0] address, output wire [7:0] word);//memoria
       $readmemb("memory.list", mem);//lectura del archivo de datos
   end
   assign word = mem[address];// resultado leido de la memoria
-endmodule
+endmodule//program rom implementada junto con una lista de datos en el memory list
 
 module Control (input clk, resetC, resetF, enableC, enableF, load, input [11:0] loadPC, output [3:0] instr, oprnd);
 
@@ -50,4 +50,4 @@ Program_Couter PC1(clk, resetC, enableC, load, loadPC, PC);
 Program_ROM PR1(PC, program_byte);
 Fetch F1(clk, resetF, enableF, program_byte, instr, oprnd);
 
-endmodule
+endmodule//union de todos modulos para el fragmento del microprocesador .
