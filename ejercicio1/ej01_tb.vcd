@@ -1,0 +1,418 @@
+$date
+	Sat Nov 07 17:50:32 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module testbench $end
+$var wire 4 ! oprnd [3:0] $end
+$var wire 4 " instr [3:0] $end
+$var reg 1 # clock $end
+$var reg 1 $ enableC $end
+$var reg 1 % enableF $end
+$var reg 1 & load $end
+$var reg 12 ' loadPC [11:0] $end
+$var reg 1 ( resetC $end
+$var reg 1 ) resetF $end
+$scope module ctrl1 $end
+$var wire 1 # clk $end
+$var wire 1 $ enableC $end
+$var wire 1 % enableF $end
+$var wire 1 & load $end
+$var wire 12 * loadPC [11:0] $end
+$var wire 1 ( resetC $end
+$var wire 1 ) resetF $end
+$var wire 8 + program_byte [7:0] $end
+$var wire 4 , oprnd [3:0] $end
+$var wire 4 - instr [3:0] $end
+$var wire 12 . PC [11:0] $end
+$scope module F1 $end
+$var wire 1 # clk $end
+$var wire 1 % enable $end
+$var wire 1 ) reset $end
+$var wire 8 / program_byte [7:0] $end
+$var wire 4 0 oprnd [3:0] $end
+$var wire 4 1 instr [3:0] $end
+$scope module FF1 $end
+$var wire 1 2 D $end
+$var wire 1 # clk $end
+$var wire 1 % enable $end
+$var wire 1 ) reset $end
+$var reg 1 3 Y $end
+$upscope $end
+$scope module FF2 $end
+$var wire 1 4 D $end
+$var wire 1 # clk $end
+$var wire 1 % enable $end
+$var wire 1 ) reset $end
+$var reg 1 5 Y $end
+$upscope $end
+$scope module FF3 $end
+$var wire 1 6 D $end
+$var wire 1 # clk $end
+$var wire 1 % enable $end
+$var wire 1 ) reset $end
+$var reg 1 7 Y $end
+$upscope $end
+$scope module FF4 $end
+$var wire 1 8 D $end
+$var wire 1 # clk $end
+$var wire 1 % enable $end
+$var wire 1 ) reset $end
+$var reg 1 9 Y $end
+$upscope $end
+$scope module FF5 $end
+$var wire 1 : D $end
+$var wire 1 # clk $end
+$var wire 1 % enable $end
+$var wire 1 ) reset $end
+$var reg 1 ; Y $end
+$upscope $end
+$scope module FF6 $end
+$var wire 1 < D $end
+$var wire 1 # clk $end
+$var wire 1 % enable $end
+$var wire 1 ) reset $end
+$var reg 1 = Y $end
+$upscope $end
+$scope module FF7 $end
+$var wire 1 > D $end
+$var wire 1 # clk $end
+$var wire 1 % enable $end
+$var wire 1 ) reset $end
+$var reg 1 ? Y $end
+$upscope $end
+$scope module FF8 $end
+$var wire 1 @ D $end
+$var wire 1 # clk $end
+$var wire 1 % enable $end
+$var wire 1 ) reset $end
+$var reg 1 A Y $end
+$upscope $end
+$upscope $end
+$scope module PC1 $end
+$var wire 1 # clk $end
+$var wire 1 $ enable $end
+$var wire 1 & load $end
+$var wire 12 B loadPC [11:0] $end
+$var wire 1 ( reset $end
+$var reg 12 C count [11:0] $end
+$upscope $end
+$scope module PR1 $end
+$var wire 12 D address [11:0] $end
+$var wire 8 E word [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11101101 E
+b0 D
+b0 C
+bx B
+0A
+1@
+0?
+0>
+0=
+1<
+0;
+1:
+09
+08
+07
+16
+05
+14
+03
+12
+b0 1
+b0 0
+b11101101 /
+b0 .
+b0 -
+b0 ,
+b11101101 +
+bx *
+1)
+1(
+bx '
+x&
+x%
+x$
+1#
+b0 "
+b0 !
+$end
+#1
+0#
+#2
+1#
+b0 '
+b0 *
+b0 B
+0&
+0)
+0(
+0$
+0%
+#3
+0#
+#4
+1#
+#5
+0#
+#6
+1#
+#7
+0#
+#8
+1A
+1=
+b1101 !
+b1101 ,
+b1101 0
+1;
+17
+15
+b1110 "
+b1110 -
+b1110 1
+13
+1#
+1%
+1$
+#9
+0#
+#10
+0A
+1?
+0=
+b10 !
+b10 ,
+b10 0
+0;
+19
+07
+05
+b1 "
+b1 -
+b1 1
+03
+0@
+1>
+0<
+0:
+18
+06
+04
+02
+1#
+b10010 +
+b10010 /
+b10010 E
+b1 .
+b1 C
+b1 D
+#11
+0#
+#12
+13
+15
+b1111 "
+b1111 -
+b1111 1
+17
+1=
+b111 !
+b111 ,
+b111 0
+1A
+1@
+1<
+16
+14
+12
+1#
+b11110111 +
+b11110111 /
+b11110111 E
+b10 .
+b10 C
+b10 D
+#13
+0#
+#14
+1#
+b11 .
+b11 C
+b11 D
+#15
+0#
+#16
+05
+07
+b1000 "
+b1000 -
+b1000 1
+09
+b11 !
+b11 ,
+b11 0
+0=
+0<
+08
+06
+04
+1#
+b10000011 +
+b10000011 /
+b10000011 E
+b100 .
+b100 C
+b100 D
+#17
+0#
+#18
+b1 !
+b1 ,
+b1 0
+0?
+b1100 "
+b1100 -
+b1100 1
+15
+0>
+14
+1#
+b11000001 +
+b11000001 /
+b11000001 E
+b101 .
+b101 C
+b101 D
+#19
+0#
+#20
+03
+05
+17
+b11 "
+b11 -
+b11 1
+19
+1=
+b111 !
+b111 ,
+b111 0
+1?
+1>
+1<
+18
+16
+04
+02
+1#
+b110111 +
+b110111 /
+b110111 E
+b110 .
+b110 C
+b110 D
+b1100 '
+b1100 *
+b1100 B
+1&
+#21
+0#
+#22
+b101 !
+b101 ,
+b101 0
+0?
+09
+b1010 "
+b1010 -
+b1010 1
+13
+0>
+08
+12
+1#
+b10100101 +
+b10100101 /
+b10100101 E
+b1100 .
+b1100 C
+b1100 D
+0&
+#23
+0#
+#24
+03
+b0 "
+b0 -
+b0 1
+07
+b111 !
+b111 ,
+b111 0
+1?
+1>
+06
+02
+1#
+b111 +
+b111 /
+b111 E
+b1101 .
+b1101 C
+b1101 D
+#25
+0#
+#26
+b11 !
+b11 ,
+b11 0
+0=
+17
+b110 "
+b110 -
+b110 1
+15
+0<
+16
+14
+1#
+b1100011 +
+b1100011 /
+b1100011 E
+b1110 .
+b1110 C
+b1110 D
+#27
+0#
+#28
+b1110 "
+b1110 -
+b1110 1
+13
+1;
+b1001 !
+b1001 ,
+b1001 0
+0?
+0>
+1:
+12
+1#
+b11101001 +
+b11101001 /
+b11101001 E
+b1111 .
+b1111 C
+b1111 D
